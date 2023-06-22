@@ -1,7 +1,4 @@
--- テーブル削除
-DROP TABLE IF EXISTS eat;
-DROP TABLE IF EXISTS comments;
-DROP TABLE IF EXISTS user;
+
 
 
 -- お店のテーブル
