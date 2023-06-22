@@ -1,4 +1,6 @@
-
+DROP TABLE IF EXISTS eat;
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS human;
 
 
 -- お店のテーブル
@@ -19,15 +21,16 @@ CREATE TABLE comments
 (
    id SERIAL PRIMARY KEY,
    name TEXT,
+   bango INTEGER,
+   namae TEXT,
    comment TEXT
 );
 
 
 -- ユーザーテーブル
-CREATE TABLE user
+CREATE TABLE human
 (
-  id SERIAL PRIMARY KEY,
-  name TEXT,
+  bango SERIAL PRIMARY KEY,
+  namae TEXT,
   password TEXT
 );
-
