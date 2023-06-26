@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>口コミ一覧</title>
+</head>
+<body>
+<h1>口コミ一覧</h1>
+
+<form th:action="|/eats/${eat.id}/kutikomi|" method="post">
+	<table border="1">
+		<tr>
+			<th>店名</th>
+			<td>[[${eat.name}]]</td>
+		</tr>
+		<tr>	
+			<th>ユーザー名</th>
+			<td>[[${eat.namae}]]</td>
+		</tr>
+		<tr>
+			<th>コメント</th>
+			<td>[[${eat.comment}]]</td>
+		</tr>
+	</table>
+	
+</form>
+</body>
+</html>
