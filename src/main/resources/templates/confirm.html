@@ -11,7 +11,7 @@
 
 
 	<input type="hidden" name="namae" th:value="${comments.namae}">
-	<input type="hidden" name="name" th:value="${comments.name}">
+	<input type="hidden" name="name" th:value="${comments.eat.name}">
 	<input type="hidden" name="comment" th:value="${comments.comment}">
 	<tr>
 	<th>ユーザー名</th>
@@ -21,16 +21,16 @@
 	
 	<tr>
 	<th>店名</th>
-	<td>[[${comments.name}]]</td>
+	<td>[[${comments.eat.name}]]</td>
 	</tr>
 	
 	
 	<tr>
 	<th>コメント</th>
-	<td>[[${comments.newcomment}]]</td>
+	<td>[[${comments.comment}]]</td>
 	</tr>
 </table>
-	<input type="hidden"name="eatid" th:value="${comments.eatid}">
+	<input type="hidden"name="eatid" th:value="${comments.eat.id}">
 	<input type="hidden"name="bango" th:value="${comments.bango}">
 <input type="submit" value="投稿">
 

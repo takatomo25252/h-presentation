@@ -27,11 +27,13 @@ public class NewCommentController {
 			@RequestParam(name = "newcomment", required = false) String newcomment,
 			Model m) {
 
+		System.out.println(eatid + bango + namae + newcomment);
 		Comments comments = new Comments(eatid, bango, namae, newcomment);
 
 		commentRepository.save(comments);
 		
-		
+		m.addAttribute("comments", comments);
+	
 
 		return "confirm";
 	}

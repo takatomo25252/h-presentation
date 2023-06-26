@@ -11,7 +11,7 @@
 	<table border="1">
 		<tr>
 			<th>店名</th>
-			<td>[[${comments.id}]]</td>
+			<td>[[${comments.eat.name}]]</td>
 		</tr>
 		<tr>	
 			<th>ユーザー名</th>
@@ -25,7 +25,7 @@
 	
 	
 <form th:action="write" method="post">	
-	<input type="hidden"name="eatid" th:value="${comments.eatid}">
+	<input type="hidden"name="eatid" th:value="${comments.eat.id}">
 	<input type="hidden"name="bango" th:value="${comments.bango}">
 	<input type="hidden"name="namae" th:value="${comments.namae}">
 	<input type="text"name="newcomment">
