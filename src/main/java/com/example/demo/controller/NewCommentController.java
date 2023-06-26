@@ -41,10 +41,10 @@ public class NewCommentController {
 			@RequestParam(name = "eatid", required = false) Integer eatid,
 			@RequestParam(name = "bango", required = false) Integer bango,
 			@RequestParam(name = "namae", required = false) String namae,
-			@RequestParam(name = "newcomment", required = false) String newcomment,
+			@RequestParam(name = "comment", required = false) String comment,
 			Model m) {
 
-		Comments comments = new Comments(eatid, bango, namae, newcomment);
+		Comments comments = new Comments(eatid, bango, namae, comment);
 
 		m.addAttribute("comments", comments);
 		
