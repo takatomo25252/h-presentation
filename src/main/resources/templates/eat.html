@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>店舗一覧</title>
@@ -22,9 +22,21 @@
 				<td th:text="${eat.genre}"></td>
 				<td th:text="${eat.detail}"></td>
 				<td th:text="${eat.star}"></td>
+				
+				<td>
+			<form th:action="|/eats/${eat.id}/kutikomi|" method="get">
+				<input type="submit" value="口コミ">
+			</form>
+			
+			
+		</td>
 				<td th:text="${eat.link}"></td>
 				
+				
 			</tr>
+			
+
+			
 		</table>
 </body>
 </html>
