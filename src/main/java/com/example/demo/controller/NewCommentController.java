@@ -28,6 +28,7 @@ public class NewCommentController {
 			@RequestParam(name = "eatid", required = false) Integer eatid,
 			@RequestParam(name = "bango", required = false) Integer bango,
 			@RequestParam(name = "namae", required = false) String namae,
+			@RequestParam(name = "name", required = false) String name,
 			@RequestParam(name = "newcomment", required = false) String newcomment,
 			Model m) {
 
