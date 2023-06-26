@@ -22,4 +22,18 @@ public class Comments {
 
 	private String name;
 
+
+
+public Comments() {
+
 }
+
+//コンストラクタ（登録用）
+public Comments( String comment) {
+	this.comment = comment;
+
+}
+
+}
+
+
