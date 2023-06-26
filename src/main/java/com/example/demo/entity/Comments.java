@@ -9,20 +9,18 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "eat")
-public class Eat {
+@Table(name = "comments")
+public class Comments {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer id;
+	private Integer bango;
 
 	
+	private String namae;
+	private String comment;
+
+    private Integer id;
 	private String name;
-	private String area;
-	private String genre;
-	private String detail;
-	private String star;
-	private String link;
-	
 
 	
 }
