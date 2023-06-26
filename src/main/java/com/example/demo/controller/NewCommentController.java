@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,13 +9,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Comments;
+import com.example.demo.entity.Eat;
 import com.example.demo.repository.CommentRepository;
+import com.example.demo.repository.EatRepository;
 
 @Controller
 public class NewCommentController {
 
-	/*	@Autowired
-		private EatRepository eatRepository;*/
+	@Autowired
+	private EatRepository eatRepository;
 
 	@Autowired
 	private CommentRepository commentRepository;
@@ -27,16 +31,20 @@ public class NewCommentController {
 			@RequestParam(name = "newcomment", required = false) String newcomment,
 			Model m) {
 
-		System.out.println(eatid + bango + namae + newcomment);
-		Comments comments = new Comments(eatid, bango, namae, newcomment);
+		Optional<Eat> result = eatRepository.findById(eatid);
+		Eat eat = null;
+		if (result.isPresent()) {
+			eat = result.get();
+		}
+		Comments comments = new Comments(eat, bango, namae, newcomment);
 
 		commentRepository.save(comments);
-		
+
 		m.addAttribute("comments", comments);
-	
 
 		return "confirm";
 	}
+
 	@PostMapping("/update")
 	public String update(
 			@RequestParam(name = "id", required = false) Integer id,
@@ -45,8 +53,12 @@ public class NewCommentController {
 			@RequestParam(name = "namae", required = false) String namae,
 			@RequestParam(name = "comment", required = false) String comment,
 			Model m) {
-
-		Comments comments = new Comments(eatid, bango, namae, comment);
+		Optional<Eat> result = eatRepository.findById(eatid);
+		Eat eat = null;
+		if (result.isPresent()) {
+			eat = result.get();
+		}
+		Comments comments = new Comments(eat, bango, namae, comment);
 
 		m.addAttribute("comments", comments);
 		
@@ -54,6 +66,5 @@ public class NewCommentController {
 
 		return "redirect:/kutikomi";
 	}
-	
-	
+
 }

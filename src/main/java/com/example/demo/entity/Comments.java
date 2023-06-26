@@ -35,11 +35,11 @@ public class Comments {
 	}
 
 	//コンストラクタ（登録用）
-	public Comments(Integer eatid, Integer bango, String namae, String comment) {
+	public Comments(Eat eat, Integer bango, String namae, String comment) {
 		this.comment = comment;
 		this.bango = bango;
 		this.namae = namae;
-		this.eatid = eatid;
+		this.eat = eat;
 	}
 
 }
