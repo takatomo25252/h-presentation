@@ -47,10 +47,6 @@ public class EatController {
 		if (record.isEmpty() == false) {
 			comments = record.get();
 		}
-		
-		
-		
-	
 		m.addAttribute("comments", comments);
 		
 		//商品編集画面表示へ

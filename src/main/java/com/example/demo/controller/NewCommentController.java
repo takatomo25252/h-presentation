@@ -30,8 +30,28 @@ public class NewCommentController {
 		Comments comments = new Comments(eatid, bango, namae, newcomment);
 
 		commentRepository.save(comments);
+		
+		
 
 		return "confirm";
 	}
+	@PostMapping("/update")
+	public String update(
+			@RequestParam(name = "id", required = false) Integer id,
+			@RequestParam(name = "eatid", required = false) Integer eatid,
+			@RequestParam(name = "bango", required = false) Integer bango,
+			@RequestParam(name = "namae", required = false) String namae,
+			@RequestParam(name = "newcomment", required = false) String newcomment,
+			Model m) {
 
+		Comments comments = new Comments(eatid, bango, namae, newcomment);
+
+		m.addAttribute("comments", comments);
+		
+		
+
+		return "redirect:/kutikomi";
+	}
+	
+	
 }
