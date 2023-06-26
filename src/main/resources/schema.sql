@@ -20,7 +20,7 @@ CREATE TABLE eat
 CREATE TABLE comments
 (
    id SERIAL PRIMARY KEY,
-   name TEXT,
+   eatid INTEGER,
    bango INTEGER,
    namae TEXT,
    comment TEXT
@@ -30,7 +30,7 @@ CREATE TABLE comments
 -- ユーザーテーブル
 CREATE TABLE human
 (
-  bango TEXT,
+  bango SERIAL PRIMARY KEY,
   namae TEXT,
   password TEXT
 );

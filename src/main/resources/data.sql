@@ -19,26 +19,26 @@ INSERT INTO eat (id,name,area,genre,detail,star,link) VALUES ('18','tavern on S 
 INSERT INTO eat (id,name,area,genre,detail,star,link) VALUES ('19','韓国料理 水刺齋','新宿','その他','韓国料理','3.46','http://suranje.com/');
 
 
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('1','1','はると','フレンチトーストがふわふわでおいしかったです');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('2','2','luck_4413','プリンがとても濃厚で接客がよかった');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('3','3','みほこ','ランチセットはデザートプレート付きで超お得。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('4','4','張三','ソースがガーリック風味でおいしかったです。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('5','5','caesar','市ヶ谷でとんかつといえばここしかない。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('6','6','al5.h243o52hq','どんどん味が落ちていく感じがします。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('7','7','弥勒菩薩','オープンテラスの席で解放感が良い。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('8','8','qwer','最高！その一言に尽きる。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('9','4','張三','不像是新疆人開的，像是東北人開的。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('10','6','al5.h243o52hq','やっぱりチェーん軟化より全然違う！！！');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('11','5','caesar','Too expensive!!!!');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('12','1','はると','スープがめちゃくちゃこってりで疲れました。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('13','2','luck_4413','おいしく健康的で心にしみます。。。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('14','3','みほこ','卵がふわふわで今まで食べたオムライスの中で一番おいしかったです。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('15','4','張三','何度来てもおいしい。カキのピザがおすすめ。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('16','5','caesar','クジラのしゃぶしゃぶは初めて。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('17','6','al5.h243o52hq','値段が高いだけでなく、サービス料も取られました。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('18','7','弥勒菩薩','メインディッシュよりデザートの方が印象的でした。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('19','8','qwer','高島屋にあるのでコスパが悪い。韓国料理なら新大久保の方がいい。');
 
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('1','No.4','1','はると','フレンチトーストがふわふわでおいしかったです');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('2','呑める喫茶店イイジカン','2','luck_4413','プリンがとても濃厚で接客がよかった');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('3','グローブ デュ モンド','3','みほこ','ランチセットはデザートプレート付きで超お得。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('4','旬菜ステーキ処 らいむらいと','4','張三','ソースがガーリック風味でおいしかったです。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('5','とんかつ 河むら','5','caesar','市ヶ谷でとんかつといえばここしかない。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('6','香港華記茶餐廳','6','al5.h243o52hq','どんどん味が落ちていく感じがします。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('7','タイの食卓 オールドタイランド','7','弥勒菩薩','オープンテラスの席で解放感が良い。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('8','銀座洋食 三笠會館','8','qwer','最高！その一言に尽きる。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('9','アリヤ 清真美食','4','張三','不像是新疆人開的，像是東北人開的。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('10','回し寿司 活 活美登利','6','al5.h243o52hq','やっぱりチェーん軟化より全然違う！！！');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('11','ブラッスリー・ル・リオン','5','caesar','Too expensive!!!!');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('12','天下一品','1','はると','スープがめちゃくちゃこってりで疲れました。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('13','和食・酒 えん','2','luck_4413','おいしく健康的で心にしみます。。。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('14','ビストロカフェ レディース&ジェントルメン','3','みほこ','卵がふわふわで今まで食べたオムライスの中で一番おいしかったです。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('15','Oyster Bar ジャックポット','4','張三','何度来てもおいしい。カキのピザがおすすめ。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('16','土佐料理 祢保希','5','caesar','クジラのしゃぶしゃぶは初めて。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('17','添好運','6','al5.h243o52hq','値段が高いだけでなく、サービス料も取られました。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('18','tavern on S <es>','7','弥勒菩薩','メインディッシュよりデザートの方が印象的でした。');
-INSERT INTO comments (id, name,bango,namae,comment) VALUES ('19','韓国料理 水刺齋','8','qwer','高島屋にあるのでコスパが悪い。韓国料理なら新大久保の方がいい。');
 
 
 INSERT INTO human (bango,namae,password) VALUES ('1','はると','111');

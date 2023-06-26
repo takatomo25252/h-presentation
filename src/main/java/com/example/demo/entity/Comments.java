@@ -20,7 +20,7 @@ public class Comments {
 	private String namae;
 	private String comment;
 
-	private String name;
+	private Integer eatid;
 
 
 
@@ -29,8 +29,12 @@ public Comments() {
 }
 
 //コンストラクタ（登録用）
-public Comments( String comment) {
+public Comments(Integer eatid, Integer bango, String namae,String comment) {
 	this.comment = comment;
+	this.bango=bango;
+	this.namae=namae;
+	this.eatid=eatid;
+	
 
 }
 
