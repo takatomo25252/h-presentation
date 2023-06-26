@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -22,22 +24,21 @@ public class Comments {
 
 	private Integer eatid;
 
+	@ManyToOne
+	@JoinColumn(name= "id")
+	private Eat eat;
 
+	public Comments() {
 
-public Comments() {
+	}
+
+	//コンストラクタ（登録用）
+	public Comments(Integer eatid, Integer bango, String namae, String comment) {
+		this.comment = comment;
+		this.bango = bango;
+		this.namae = namae;
+		this.eatid = eatid;
+
+	}
 
 }
-
-//コンストラクタ（登録用）
-public Comments(Integer eatid, Integer bango, String namae,String comment) {
-	this.comment = comment;
-	this.bango=bango;
-	this.namae=namae;
-	this.eatid=eatid;
-	
-
-}
-
-}
-
-
