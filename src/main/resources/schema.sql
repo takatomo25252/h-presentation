@@ -11,7 +11,7 @@ CREATE TABLE eat
    area TEXT,
    genre TEXT,
    detail TEXT,
-   star NUMERIC,
+   star TEXT,
    link TEXT
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE comments
 -- ユーザーテーブル
 CREATE TABLE human
 (
-  bango SERIAL PRIMARY KEY,
+  bango TEXT,
   namae TEXT,
   password TEXT
 );
