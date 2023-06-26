@@ -12,15 +12,14 @@ import lombok.Data;
 @Table(name = "comments")
 public class Comments {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
 	private Integer bango;
 
-	
 	private String namae;
 	private String comment;
 
-    private Integer id;
 	private String name;
 
-	
 }

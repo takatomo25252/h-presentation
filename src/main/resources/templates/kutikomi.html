@@ -7,19 +7,19 @@
 <body>
 <h1>口コミ一覧</h1>
 
-<!--<form th:action="|/eats/${eat.id}/kutikomi|" method="post">-->
+<!--<form th:action="kutikomi" method="post">-->
 	<table border="1">
 		<tr>
 			<th>店名</th>
-			<td>[[${eat.name}]]</td>
+			<td>[[${comments.name}]]</td>
 		</tr>
 		<tr>	
 			<th>ユーザー名</th>
-			<td>[[${eat.namae}]]</td>
+			<td>[[${comments.namae}]]</td>
 		</tr>
 		<tr>
 			<th>コメント</th>
-			<td>[[${eat.comment}]]</td>
+			<td>[[${comments.comment}]]</td>
 		</tr>
 	</table>
 	

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Comments;
 import com.example.demo.entity.Eat;
@@ -34,9 +34,9 @@ public class EatController {
 	}
 	
 	
-	@GetMapping("/eats/{id}/kutuikomi")
+	@GetMapping("kutikomi")
 	public String edit(
-			@PathVariable(name="id", required=false) Integer id,
+			@RequestParam(name="id", required=false) Integer id,
 			Model m
 	) {
 		Comments comments = null;
@@ -48,12 +48,9 @@ public class EatController {
 			comments = record.get();
 		}
 		
-		//商品が存在しなければ商品一覧へ
-		if (comments == null) {
-			return "redirect:/eat";
-		}
 		
-		//Modelクラスに設定
+		
+	
 		m.addAttribute("comments", comments);
 		
 		//商品編集画面表示へ

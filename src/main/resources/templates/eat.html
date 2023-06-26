@@ -24,7 +24,8 @@
 				<td th:text="${eat.star}"></td>
 				
 				<td>
-			<form th:action="|/eats/${eat.id}/kutikomi|" method="get">
+			<form th:action="kutikomi" method="get">
+				<input type="hidden" name="id" th:value="${eat.id}">
 				<input type="submit" value="口コミ">
 			</form>
 			
