@@ -37,6 +37,7 @@ public class EatController {
 	@GetMapping("kutikomi")
 	public String edit(
 			@RequestParam(name="id", required=false) Integer id,
+			@RequestParam(name="eatid", required=false) Integer eatid,
 			Model m
 	) {
 		Comments comments = null;
