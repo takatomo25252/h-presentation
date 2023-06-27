@@ -3,9 +3,11 @@ package com.example.demo.controller;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -88,24 +90,17 @@ public class HumanController {
 			List<String> errors = new ArrayList<>();
 			
 			if (bango == null || bango.equals("")) {
-				errors.add("名前は3必須です");
+				errors.add("ユーザIDは必須です");
 			}
 			
-			if (address == null || address.equals("")) {
-				errors.add("住所は必須です");
-			}
 			
-			if (tel == null || tel.equals("")) {
-				errors.add("電話番号は必須です");
-			}
-			
-			if (email == null || email.equals("")) {
-				errors.add("メールアドレスは必須です");
+			if (namae == null || namae.equals("")) {
+				errors.add("名前は必須です");
 			} else {
-				List<Customer> records = customerRepository.findByEmail(email);
+				List<Human> records = humanRepository.findById(bango);
 				
 				if (records.size() > 0) {
-					errors.add("登録済みのメールアドレスです");
+					errors.add("登録済みのユーザーIDです");
 				}
 			}
 			
@@ -114,22 +109,20 @@ public class HumanController {
 			}
 			
 			if (errors.size() > 0) {
-				model.addAttribute("errors", errors);
-				model.addAttribute("name", name);
-				model.addAttribute("address", address);
-				model.addAttribute("tel", tel);
-				model.addAttribute("email", email);
-				model.addAttribute("password", password);
+				m.addAttribute("errors", errors);
+				m.addAttribute("namae", namae);
+				m.addAttribute("bango", bango);
+				m.addAttribute("password", password);
 				
 				return "accountForm";
 			}
 			
 			
 			//Customerクラスの登録用のコンストラクタでインスタンスを生成
-			Customer customer = new Customer(name, address, tel, email, password);
+			Human human = new Human(bango. namae, password);
 			
 			//登録処理
-			customerRepository.save(customer);
+			humanRepository.save(human);
 			
 			// 「/login」へのリダイレクト
 			return "redirect:/login";
