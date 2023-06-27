@@ -24,9 +24,9 @@
 	</table>	
 	
 <form th:action="write" method="post">	
-	<input type="hidden"name="eatid" th:value="${comments.eat.id}">
-	<input type="hidden"name="bango" th:value="${comments.bango}">
-	<input type="hidden"name="namae" th:value="${comments.namae}">
+	<input type="hidden"name="eatid" th:value="${comments[0].eat.id}">
+	<input type="hidden"name="bango" th:value="${comments[0].bango}">
+	<input type="hidden"name="namae" th:value="${comments[0].namae}">
 	<input type="text"name="newcomment">
 	<br>
 	<input type="submit"value="確認">

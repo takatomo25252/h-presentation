@@ -25,8 +25,8 @@
 				
 				<td>
 			<form th:action="kutikomi" method="get">
-				<input type="hidden" name="id" th:value="${eat.id}">
-			<!--	<input type="hidden"name="eatid" th:value="${comments.eat.id}">-->
+				<!--<input type="hidden" name="id" th:value="${eat.id}">-->
+			<input type="hidden"name="eatid" th:value="${eat.id}">
 				<input type="submit" value="口コミ">
 			</form>
 			

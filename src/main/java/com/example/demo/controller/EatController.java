@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,18 +35,21 @@ public class EatController {
 	
 	@GetMapping("kutikomi")
 	public String edit(
-			@RequestParam(name="id", required=false) Integer id,
+			/*@RequestParam(name="id", required=false) Integer id,*/
 			@RequestParam(name="eatid", required=false) Integer eatid,
 			Model m
 	) {
-		Comments comments = null;
 		
+		 List<Comments> comments = null;
+				
+		comments =commentRepository.findByEat(eatid);
 		
-		Optional<Comments> record = commentRepository.findById(id);
-		
-		if (record.isEmpty() == false) {
-			comments = record.get();
-		}
+		/*	Comments comments = null;
+			Optional<Comments> record = commentRepository.findById(id);
+			
+			if (record.isEmpty() == false) {
+				comments = record.get();
+			}*/
 		m.addAttribute("comments", comments);
 		
 		//商品編集画面表示へ
