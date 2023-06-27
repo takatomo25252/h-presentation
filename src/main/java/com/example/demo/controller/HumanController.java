@@ -39,7 +39,7 @@ public class HumanController {
 		// ログインを実行
 		@PostMapping("/login")
 		public String login(
-				@RequestParam("bango") String bango,
+				@RequestParam("bango") Integer bango,
 				@RequestParam("password") String password,
 				Model m) {
 			//ログインチェック
@@ -71,7 +71,7 @@ public class HumanController {
 		// お客様情報登録フォームを表示
 		@GetMapping("/account")
 		public String create() {
-			return "accountForm";
+			return "register";
 		}
 		
 		// お客様情報登録
@@ -111,7 +111,7 @@ public class HumanController {
 				m.addAttribute("bango", bango);
 				m.addAttribute("password", password);
 				
-				return "accountForm";
+				return "register";
 			}
 			
 			
