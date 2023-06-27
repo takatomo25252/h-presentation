@@ -33,7 +33,7 @@ public class HumanController {
 			
 			// エラーパラメータのチェック
 			if (error.equals("notLoggedIn")) {
-				model.addAttribute("message", "ログインしてください");
+				m.addAttribute("message", "ログインしてください");
 			}
 
 			return "login";
@@ -119,7 +119,7 @@ public class HumanController {
 			
 			
 			//Customerクラスの登録用のコンストラクタでインスタンスを生成
-			Human human = new Human(bango. namae, password);
+			Human human = new Human(bango,namae, password);
 			
 			//登録処理
 			humanRepository.save(human);
