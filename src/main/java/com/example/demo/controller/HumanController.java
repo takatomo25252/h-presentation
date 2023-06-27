@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,7 +49,7 @@ public class HumanController {
 			//ログインチェック
 			Human human = null;
 			
-			Optional<Huamn> record = humanRepository.findByBangoAndPassword(bango, password);
+			Optional<Human> record = humanRepository.findByBangoAndPassword(bango, password);
 			
 			if (record.isEmpty() == false) {
 				human = record.get();
@@ -97,7 +98,7 @@ public class HumanController {
 			if (namae == null || namae.equals("")) {
 				errors.add("名前は必須です");
 			} else {
-				List<Human> records = humanRepository.findById(bango);
+				List<Human> records = humanRepository.findByBango(bango);
 				
 				if (records.size() > 0) {
 					errors.add("登録済みのユーザーIDです");
