@@ -14,27 +14,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.entity.Human;
 import com.example.demo.repository.HumanRepository;
 
-import jakarta.servlet.http.HttpSession;
-
 @Controller
 public class HumanController {
- 
-	@Autowired
-	HttpSession session;
-	
-	
-	@Autowired
-	Human human;
 
+	
 	@Autowired
-	HumanRepository humanRepository;
+	private HumanRepository humanRepository;
 	
 	// ログイン画面を表示
 		@GetMapping({ "/", "/login", "/logout"  })
 		public String index(
 				@RequestParam(name = "error", defaultValue = "") String error,
 				Model m) {
-			session.invalidate();
+			
 			
 			// エラーパラメータのチェック
 			if (error.equals("notLoggedIn")) {
