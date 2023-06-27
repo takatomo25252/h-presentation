@@ -8,21 +8,20 @@
 <h1>口コミ一覧</h1>
 
 
-	<table border="1">
+	<table th:each="comment:${comments}" border="1">
 		<tr>
 			<th>店名</th>
-			<td>[[${comments.eat.name}]]</td>
+			<td>[[${comment.eat.name}]]</td>
 		</tr>
-		<tr>	
+		<tr >	
 			<th>ユーザー名</th>
-			<td>[[${comments.namae}]]</td>
+			<td>[[${comment.namae}]]</td>
 		</tr>
 		<tr>
 			<th>コメント</th>
-			<td>[[${comments.comment}]]</td>
+			<td>[[${comment.comment}]]</td>
 		</tr>
-	</table>
-	
+	</table>	
 	
 <form th:action="write" method="post">	
 	<input type="hidden"name="eatid" th:value="${comments.eat.id}">

@@ -13,6 +13,8 @@ import com.example.demo.entity.Eat;
 import com.example.demo.repository.CommentRepository;
 import com.example.demo.repository.EatRepository;
 
+import jakarta.transaction.Transactional;
+
 @Controller
 public class NewCommentController {
 
@@ -47,6 +49,7 @@ public class NewCommentController {
 	}
 
 	@PostMapping("/update")
+	@Transactional
 	public String update(
 			@RequestParam(name = "id", required = false) Integer id,
 			@RequestParam(name = "eatid", required = false) Integer eatid,
@@ -61,11 +64,12 @@ public class NewCommentController {
 		}
 		Comments comments = new Comments(eat, bango, namae, comment);
 
+		commentRepository.save(comments);
 		m.addAttribute("comments", comments);
 		
 		
 
-		return "redirect:/kutikomi";
+		return "redirect:/eat";
 	}
 
 }

@@ -28,7 +28,7 @@ public class Comments {
 	
 	@OneToOne
 	@JoinColumn(name="eatid")
-	private Eat eat;
+	private Eat eat;  //外部結合 commentのeatid = eatのid
 	
 	public Comments() {
 
