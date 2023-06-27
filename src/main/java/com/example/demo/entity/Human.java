@@ -1,25 +1,35 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 import lombok.Data;
 
 @Data
 
-@Entity
-@Table(name = "human")
+@Component
+@SessionScope
 public class Human {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
+	//フィールド
 	private Integer bango;
-    private String namae;
+	private String namae;
 	private String password;
 	
+	//コンストラクタ
+	public Human() {
+		
+	}
+
+	public Human(Integer bango, String namae) {
+		this.bango = bango;
+		this.namae = namae;
+	}
+	
+	public Human(Integer bango, String namae, String password) {
+		this.bango = bango;
+		this.namae = namae;
+		this.password = password;
+	}
 	
 
 	

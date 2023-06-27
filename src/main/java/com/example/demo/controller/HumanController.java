@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -16,9 +14,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.entity.Human;
 import com.example.demo.repository.HumanRepository;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class HumanController {
-
+ 
+	@Autowired
+	HttpSession session;
+	
+	
 	@Autowired
 	Human human;
 
@@ -26,11 +30,11 @@ public class HumanController {
 	HumanRepository humanRepository;
 	
 	// ログイン画面を表示
-		@GetMapping({ "/", "/login" })
+		@GetMapping({ "/", "/login", "/logout"  })
 		public String index(
 				@RequestParam(name = "error", defaultValue = "") String error,
 				Model m) {
-		
+			session.invalidate();
 			
 			// エラーパラメータのチェック
 			if (error.equals("notLoggedIn")) {
@@ -62,11 +66,11 @@ public class HumanController {
 			}
 
 			// セッション管理されたアカウント情報にIDと名前をセット
-			Integer bango = human.getBango();
+			Integer bango1 = human.getBango();
 			String namae = human.getNamae();
 			
-			account.setBango(bango);
-			account.setNamae(namae);
+			human.setBango(bango1);
+			human.setNamae(namae);
 
 			// 「/items」へのリダイレクト
 			return "redirect:/eat";
