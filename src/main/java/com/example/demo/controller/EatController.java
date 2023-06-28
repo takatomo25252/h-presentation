@@ -32,21 +32,21 @@ public class EatController {
 		
 			if(area==null&&genre==null) {
 				eats=eatRepository.findAll();
-			}else if(area.equals("ikebukuro")) {
+			}else if(area.equals("ikebukuro")&&genre==null) {
 				eats=eatRepository.findByArea(area);
-			}else if(area.equals("ichigaya")) {
+			}else if(area.equals("ichigaya")&&genre==null) {
 				eats=eatRepository.findByArea(area);
-			}else if(area.equals("shinjuku")) {
+			}else if(area.equals("shinjuku")&&genre==null) {
 				eats=eatRepository.findByArea(area);
 			}
 			
-			else if(genre.equals("wa")) {
+			if(genre.equals("wa")&&area==null) {
 				eats=eatRepository.findByGenre(genre);
-			}else if(genre.equals("you")) {
+			}else if(genre.equals("you")&&area==null) {
 				eats=eatRepository.findByGenre(genre);
-			}else if(genre.equals("tyu")) {
+			}else if(genre.equals("tyu")&&area==null) {
 				eats=eatRepository.findByGenre(genre);
-			}else if(genre.equals("sonota")) {
+			}else if(genre.equals("sonota")&&area==null) {
 				eats=eatRepository.findByGenre(genre);
 			}
 		//Modelクラスに設定
