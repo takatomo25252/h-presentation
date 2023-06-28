@@ -63,8 +63,8 @@ public class NewCommentController {
 			eat = result.get();
 		}
 		Comments comments = new Comments(eat, bango, namae, comment);
-
-		commentRepository.save(comments);
+		
+		/*commentRepository.save(comments);*/
 		m.addAttribute("comments", comments);
 		
 		
