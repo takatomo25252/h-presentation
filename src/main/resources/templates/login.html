@@ -5,18 +5,47 @@
 <title>login</title>
 </head>
 <body>
+	
+<style>
+	body{background-color: rgb(255, 255, 181);}
+	
+	.centering {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+</style>	
+	
+	
+
 	<header>
-		<h1>ログイン画面</h1>
+		
+		<div class="centering">
+		<h1>Welcome to our site</h1>
+		</div>
+		<div class="centering">
+		<h3>Bienvenue sur notre site, cher invité.<br>
+		 Ce site est conçu pour présenter des restaurants que notre couple a trouvés agréables et délicieux. <br>
+		 Si vous le souhaitez, n’hésitez pas à nous inviter à prendre un repas ensemble. </h3>
+		</div>
+		
 	</header>
+		<div class="centering">
 	<main>
 		<form action="/login" method="post">
+			<a>ようこそ、あなたのログイン情報を入力してください。</a><br>
 			<input type="text" name="bango" placeholder="ユーザーID"><br>
 			<input type="password" name="password" placeholder="パスワード"><br>
 			<button>ログイン</button>
-			<br> <span th:text="${message}" style="color: red"></span>
+			<br> <span th:text="${message}" style="color: rgb(128, 0, 64)"></span>
 		</form>
 		
+		
+		<a>ようこそ、あなたのログイン情報を入力してください。</a>
 		<a href="/account">新規会員登録はこちら</a>
 	</main>
+	
+	</div>
+	
 </body>
 </html>
