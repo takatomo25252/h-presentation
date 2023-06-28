@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>login</title>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 </head>
 <body>
 	
 <style>
-	body{background-color: rgb(255, 255, 181);}
+	body{background-color: rgb(255, 255, 210);color: rgb(70, 9, 0);}
+	main{font-family: '游明朝 Medium', serif;}
 	
 	.centering {
     align-items: center;
@@ -20,28 +23,30 @@
 
 	<header>
 		
-		<div class="centering">
-		<h1>Welcome to our site</h1>
+		<div class="centering" >
+		<h1 style="font-family: 'Kaushan Script', cursive;font-size: 60px;">Welcome to our site</h1>
+	
 		</div>
+			<hr>
 		<div class="centering">
-		<h3>Bienvenue sur notre site, cher invité.<br>
+		<h3 style="font-family:  'Homemade Apple', cursive;">Bienvenue sur notre site, cher invité.<br>
 		 Ce site est conçu pour présenter des restaurants que notre couple a trouvés agréables et délicieux. <br>
 		 Si vous le souhaitez, n’hésitez pas à nous inviter à prendre un repas ensemble. </h3>
 		</div>
-		
+		<br><br>
 	</header>
 		<div class="centering">
 	<main>
 		<form action="/login" method="post">
-			<a>ようこそ、あなたのログイン情報を入力してください。</a><br>
+			<a style="font-family: '游明朝 Medium', serif;">ようこそ、あなたのログイン情報を入力してください。</a><br>
 			<input type="text" name="bango" placeholder="ユーザーID"><br>
 			<input type="password" name="password" placeholder="パスワード"><br>
 			<button>ログイン</button>
 			<br> <span th:text="${message}" style="color: rgb(128, 0, 64)"></span>
 		</form>
 		
-		
-		<a>ようこそ、あなたのログイン情報を入力してください。</a>
+		<br>
+		<a　>初めてご利用の方は、新規登録してください。</a><br>
 		<a href="/account">新規会員登録はこちら</a>
 	</main>
 	
