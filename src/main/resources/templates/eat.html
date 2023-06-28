@@ -25,6 +25,7 @@
 				<th>ジャンル</th>
 				<th>詳細</th>
 				<th>点数</th>
+				<th>口コミ</th>
 				<th>リンク</th>
 			</tr>
 			<tr th:each="eat:${eats}">
@@ -43,7 +44,7 @@
 			
 			
 		</td>
-				<td th:text="${eat.link}"></td>
+				<td><a th:href="@{'/link'+${eat.link}}"  th:text="${eat.link}"></a></td>
 				
 				
 			</tr>
