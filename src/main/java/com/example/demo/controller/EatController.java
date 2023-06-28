@@ -27,6 +27,7 @@ public class EatController {
 	List<Eat> eats = eatRepository.findAll();
 		
 		//Modelクラスに設定
+	
 		m.addAttribute("eats", eats);
 		
 		return "eat" ;
