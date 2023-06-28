@@ -19,7 +19,7 @@ a {
 .ms-nav-container {
   position: relative;
   width: 90%;
-  height: 80vh;
+  height: 60vh;
 }
 #ms-menu {
   display: none;
@@ -101,79 +101,8 @@ a {
       animation: border-top-animation .5s ease .4s;
     }
   
-    .ms-nav .ms-menu-toggle ~ .ms-li:before {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 0px solid rgb(255, 128, 192);
-    }
-  
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li:before {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-top: 25px solid #337ab7;
-      z-index: 11;
-    }
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li:after {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-bottom: 25px solid #337ab7;
-      transition: border-bottom .3s ease;
-      z-index: 11;
-    }
 
-    .ms-nav .ms-menu-toggle:checked ~ .ms-main:after {
-      content: '';
-      width: 60px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-bottom: 45px solid #337ab7;
-      transition: border-bottom .3s ease;
-      z-index: 11;
-    }
-    .ms-nav .ms-menu-toggle:checked ~ .ms-li-last:after {
-      content: '';
-      width: 45px;
-      display: block;
-      position: absolute;
-      top: -5px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-left: 0px solid transparent;
-      border-right: 0px solid transparent;
-      border-bottom: 0px solid #337ab7;
-    }
-
+ 
 .ms-nav .ms-menu-toggle:checked ~ .ms-main span {
   transform: rotate(-45deg);
   transition: transform .35s ease;
@@ -186,11 +115,11 @@ a {
   box-shadow: 0px 5px 10px #333333;
 }
 .ms-nav > li a {
-  font-size: 20px;
-  color: #FFFFFF;
-  background: #337ab7;
-  width: 60px;
-  height: 60px;
+  font-size: 12px;
+  color: rgb(255, 255, 221);
+  background: rgb(79, 0, 0);
+  width: 40px;
+  height: 40px;
   display: block;
   border-radius: 100%;
   position: relative;
@@ -199,29 +128,18 @@ a {
 
   .ms-nav > .ms-main a,
   .ms-nav > .ms-main > a > label {
-    font-size: 20px;
-    color: #FFFFFF;
-    background: #337ab7;
-    width: 75px;
-      height: 75px;
+    font-size: 12px;
+   color: rgb(255, 255, 221);
+  background: rgb(79, 0, 0);
+    width: 55px;
+      height: 55px;
     display: block;
     border-radius: 100%;
     position: relative;
     text-align: center;
     z-index: 19;
-  }
-    .ms-nav > li > a span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      height: 30px;
-      width: 30px;
-      opacity: 0;
-      z-index: 12;
-    }
+  }         
+   
 @keyframes border-top-animation {
   0% {
     bottom: 0px;
@@ -273,23 +191,23 @@ a {
           <div class="bg-change"></div>
           <li class="ms-li ms-li3 ms-li-last">
            <a href="/eat?area=池袋">池袋
-              <span class="fa fa-search"></span>
+             
             </a>
           </li>
           <li class="ms-li ms-li2">
            <a href="/eat?area=市ヶ谷">市ヶ谷
-              <span class="fa fa-flask"></span>
+             
             </a>
           </li>
           <li class="ms-li ms-li1 ms-li-first">
             <a href="/eat?area=新宿">新宿
-              <span class="fa fa-fort-awesome"></span>
+             
             </a>
           </li>
           <li class="ms-main">
             <a href="javascript:void(0)">地域
               <label class="ms-menu-toggle-lbl" for="ms-menu">
-                <span class="fa fa-plus"></span>
+               
               </label>
             </a>
           </li>
