@@ -22,11 +22,15 @@ public class EatController {
 	@Autowired
 	private CommentRepository commentRepository;
 	
+	/*@Autowired
+	private HumanRepository humanRepository;*/
+	
 	@GetMapping("/eat")
 	public String index(
 			@RequestParam(name="area" ,required=false) String area , 
-			@RequestParam(name="genre" ,required=false) String genre
-			,Model m) {
+			@RequestParam(name="genre" ,required=false) String genre,
+			
+			Model m) {
 	List<Eat> eats =null;
 	
 		
