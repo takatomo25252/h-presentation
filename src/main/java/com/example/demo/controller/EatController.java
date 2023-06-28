@@ -23,9 +23,32 @@ public class EatController {
 	private CommentRepository commentRepository;
 	
 	@GetMapping("/eat")
-	public String index(Model m) {
-	List<Eat> eats = eatRepository.findAll();
+	public String index(
+			@RequestParam(name="area" ,required=false) String area , 
+			@RequestParam(name="genre" ,required=false) String genre
+			,Model m) {
+	List<Eat> eats =null;
+	
 		
+			if(area==null&&genre==null) {
+				eats=eatRepository.findAll();
+			}else if(area.equals("ikebukuro")) {
+				eats=eatRepository.findByArea(area);
+			}else if(area.equals("ichigaya")) {
+				eats=eatRepository.findByArea(area);
+			}else if(area.equals("shinjuku")) {
+				eats=eatRepository.findByArea(area);
+			}
+			
+			else if(genre.equals("wa")) {
+				eats=eatRepository.findByGenre(genre);
+			}else if(genre.equals("you")) {
+				eats=eatRepository.findByGenre(genre);
+			}else if(genre.equals("tyu")) {
+				eats=eatRepository.findByGenre(genre);
+			}else if(genre.equals("sonota")) {
+				eats=eatRepository.findByGenre(genre);
+			}
 		//Modelクラスに設定
 	
 		m.addAttribute("eats", eats);
