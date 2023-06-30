@@ -10,12 +10,9 @@
 	font-family: '游明朝 Medium', serif;text-align:center}
 	
 	
-	table{
-  border-collapse:  collapse;
-}
-
 .post {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .postUser {
@@ -53,7 +50,7 @@
   }
 
   .postUser__name {
-    color: #57727C;
+   
     font-size: 18px;
     font-weight: 700;
     line-height: 1;
@@ -61,40 +58,14 @@
   }
 
 .postBody {
-  /**
-   * We'll use the short-hand flex property again
-   * here, to make the body of the post expand to
-   * fill the container, and shrink as the container
-   * becomes narrower.
-   *
-   * By setting flex-grow to 1, we cause this
-   * element to expand to fill the container.
-   *
-   * Setting flex-shrink to 1 causes this element
-   * to shrink with the container.
-   *
-   * Last, we set flex-basis to 0 so that its
-   * size is solely determined by the size of
-   * the container. (The default value is auto,
-   * which would cause the content's size to also
-   * be a factor in this calculation.)
-   *
-   * The net result of these properties is that the
-   * element is a fluid size, and will expand and
-   * shrink with its container.
-   *
-   * NOTE: IE11 ignores flex short-hand declarations
-   * with unitless flex-basis values. So we have to
-   * use 0% instead of 0 as a workaround. You can
-   * find more info at:
-   * github.com/philipwalton/flexbugs.
-   */
-  flex: 1 1 0%;
 
+  flex: 1 1 0%;
+  background-color: rgb(254, 247, 255);
   position: relative;
-  padding: 5px;
-  border: 2px solid #CAD0D2;
+  padding: 1px;
+  border: 1px solid rgb(64, 0, 0);
   border-radius: 10px;
+  border-right-color: rgb(255, 255, 255);
 }
 
 .postBody:after,
@@ -118,7 +89,7 @@
 
 .postBody:before {
   border-color: transparent;
-  border-right-color: #CAD0D2;
+  border-right-color: rgb(87, 23, 23);
   border-width: 9px;
   margin-top: -9px;
 }
