@@ -22,30 +22,13 @@
 }
 
   .postUser__portrait {
-    /**
-     * We're using these three flexbox properties
-     * here to center the portrait icon inside of
-     * this element.
-     *
-     * We'll explore these properties in more detail
-     * in the "Stay Centered" section, so I'll only
-     * briefly summarize here:
-     *
-     * - display: flex instructs the browser to
-     *   use flexbox to lay out this element's
-     *   children.
-     * - justify-content: center will center the
-     *   icon along the main axis.
-     * - align-items: center will center the icon
-     *   along the secondary (perpendicular) axis.
-     */
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100px;
-    height: 90px;
-    font-size: 200px;
+    width: 90px;
+    height: 60px;
+    font-size: 10px;
     line-height: 0;
   }
 
@@ -113,7 +96,8 @@
 	<div th:each="comment:${comments}" class="post">
   <div class="postUser">
     <div class="postUser__portrait">
-      <span class="icon fa fa-user-circle-o"></span>
+      <img src="https://kotonohaworks.com/free-icons/wp-content/uploads/kkrn_icon_user_13.png" 
+       width="60" height="60">
     </div>
     <div class="postUser__name">[[${comment.namae}]]</div>
   </div>
