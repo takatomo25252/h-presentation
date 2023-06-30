@@ -38,6 +38,16 @@ INSERT INTO comments (eatid,bango,namae,comment) VALUES ('16','5','caesar','ク�
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('17','6','al5.h243o52hq','値段が高いだけでなく、サービス料も取られました。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('18','7','弥勒菩薩','メインディッシュよりデザートの方が印象的でした。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('19','8','qwer','高島屋にあるのでコスパが悪い。韓国料理なら新大久保の方がいい。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('3','4','張三','いつも美味しく頂いています！前菜は素朴な味付けで食材本来の味を120%引き立っている。メインのイトヨリは分厚くて柔らかい。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('3','5','caesar','市ヶ谷から飯田橋方面に行く途中にあるお店。夫婦二人が経営しているお店で、めちゃくちゃ美味いしボリュームも多い。エイのワイン蒸し焼きは柔らかい。ソースに溶け込んだバターの香りがパンとの相性はばつぐん。パンは自家製で、お代わりもできます。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('3','6','al5.h243o52hq','A restaurant that I stop by every time I go to Ichigaya. Very satisfied with homely taste and volume! ︎ The lunch menu is very rich and I love the homemade dessert platter. There is also a delicious coffee or tea coming with dessert.');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('16','7','弥勒菩薩','こちらのお店は、新宿野村ビルの50階に有り、窓からはすばらしい夜景が望めます。店内は広くテーブル席以外にも、和室、個室とかもあるようです。お店の方も非常に感じが良くて、いろいろとお話をすることが出来ました。窓からの景色も良く、大切な日のお食事にも使えそうです。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('16','8','qwer','お席を予約する場合、1,800円以上のコースの注文が必要です。鰹のたたきには生姜or薄切りのニンニクor両方を添えることができます。ご飯はおかわり無料です。肉厚の炭火焼の鰹のたたきはお薬味やわかめをたっぷりのせていただきました。5貫でお腹いっぱいです。春カツオ、旬の味覚は格別です。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('1','4','張三','人気のベーカリーというということでランチタイムには行列ができていました(-_-;)お昼時行かれる方は予必須ですね');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('1','6','al5.h243o52hq','フレンチトーストを食べましたがサクサクしてて柔らかくとても絶品でした(^▽^)/またいけたらいいな！');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('1','5','caesar','期間限定のストロベリートーストを食べました。めちゃくちゃ美味しかったです。インスタ映え間違いなし。お店の雰囲気も良く、店員さんの接客もとても親切に感じました。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('4','1','はると','仕事終わりに同期と食べに行きました。一見ソースはチーズ風味なのかなと思いましたがガーリックバター風味で驚きました。ボリューミーで元気が出ました。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('4','2','luck_4413','大好きなアイドルの番組で紹介されたので行ってみました！落ち着いた雰囲気で囲碁ごちがよかったです。料理はノーマルとチーズで迷った挙句チーズを選択、、悔いなし、、、ただ気になるのでまた今度ノーマルバージョンにも挑戦してみたいな。');
 
 
 
