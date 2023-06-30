@@ -69,6 +69,7 @@ public class EatController {
 				comments = record.get();
 			}*/
 		m.addAttribute("comments", comments);
+		m.addAttribute("shopname", comments.get(0).getEat().getName());
 		
 		//商品編集画面表示へ
 		return "kutikomi";
