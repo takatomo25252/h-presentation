@@ -25,104 +25,32 @@
     display: flex;
     justify-content: center;
 }
-HTML CSSResult Skip Results Iframe
-EDIT ON
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+.btn{
+    width:100px;
+    height:40px;
+    line-height:40px;
 }
-
-
-
-.btn,
-a.btn,
-button.btn {
-  font-size: 0.rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 0.05rem 0.8rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: rgb(255, 255, 223);
-  border-radius: 0.5rem;
+.btn a{
+    display:block;
+    width:100%;
+    height:100%;
+    text-decoration: none;
+    background:#700000;
+    text-align:center;
+    color:#FBFFC0;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    box-shadow:5px 5px 0px 0px #DEDEDE ;
 }
-
-/*背景*/
-
-
-.btn-border-gradient-wrap {
-  display: inline-block;
-
-  padding: 0.2rem;
-
-  border-radius: 0.5rem;
-}
-
-.btn-border-gradient-wrap--gold {
-  background-image: -webkit-linear-gradient(
-    315deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 30%,
-    #fafad6 30%,
-    #fefeb2 29%,
-    #e1ce08 20%,
-    #704308 60%
-  );
-  background-image: linear-gradient(
-    135deg,
-    #704308 0%,
-    #ffce08 37%,
-    #fefeb2 30%,
-    #fafad6 30%,
-    #fefeb2 29%,
-    #e1ce08 20%,
-    #704308 60%
-  );
-}
-
-.btn-border-gradient-wrap--gold:hover a.btn {
-  text-shadow: 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5), 0 0 15px rgba(250, 250, 214, 0.5),
-    0 0 15px rgba(250, 250, 214, 0.5);
-}
-
-a.btn-border-gradient {
-  font-size: 1rem;
-  background: rgb(253, 254, 214);
-}
-
-.btn-text-gradient--gold {
-  font-family: "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro",
-    "Hiragino Mincho ProN", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
-
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#ffffdb),
-    to(#a16422)
-  );
-
-  background: -webkit-linear-gradient(bottom, #ffffdb, #a16422);
-
-  background: linear-gradient(to top, #ffffdb, #a16422);
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
+.btn a:hover{
+    background:#E5D6D6;
+    color:#3A0335;
+    margin-left:3px;
+    margin-top:3px;
+    box-shadow:none;
 }
 
 
@@ -153,9 +81,13 @@ a.btn-border-gradient {
 			<input type="password" name="password" placeholder="パスワード"><br>
 			
 			
-			<div class="btn-border-gradient-wrap btn-border-gradient-wrap--gold">
-  <a href="/eat" class="btn btn-border-gradient"><span class="btn-text-gradient--gold">ログイン</span></a>
+			<div class='btn'>
+    <a href='"/eat"'>Login</a>
 </div>
+			
+			
+			
+			
 			<br> <span th:text="${message}" style="color: rgb(128, 0, 64)"></span>
 		</form>
 		
