@@ -5,11 +5,30 @@
 <title>register</title>
 </head>
 <body>
+	
+	<style>
+	body{background-color: rgb(255, 255, 210);color: rgb(70, 9, 0);
+	background:url("https://i.pinimg.com/originals/20/de/17/20de17c40a95ddbbb44418539748ec5e.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+	}
+	main{font-family: '游明朝 Medium', serif;}
+	
+	.centering {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}</style>
+
+
 	<header>
+		<div class="centering" >
 		<h1>新規登録</h1>
+		</div>
 	</header>
 	<main>
-	
+	<div class="centering" >
 		<div th:each="error : ${errors}" align="center" style="color: red;">
 			<span>[[${error}]]</span><br>
 		</div>
@@ -35,9 +54,12 @@
 					</td>
 				</tr>
 			</table>
-			
+			<div class="centering" >
+				
 			<button>登録</button>
+			</div>
 		</form>
+		</div>
 	</main>
 </body>
 </html>
