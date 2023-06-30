@@ -15,48 +15,13 @@
 }
 
 .post {
-  /**
-   * Lay out the children of this container with
-   * flexbox, which is horizontal by default.
-   */
   display: flex;
 }
 
 .postUser {
-  /**
-   * The flex property is a short-hand for setting
-   * the flex-grow, flex-shrink, and flex-basis
-   * properties. These properties control how the
-   * element resizes to fill its container.
-   *
-   * The value we're using here is actually the
-   * default, but I'm including so I can explain it
-   * a bit. The default value equates to:
-   *
-   * - flex-grow: 0
-   * - flex-shrink: 1
-   * - flex-basis: auto
-   *
-   * We set flex-grow to 0, so this element won't
-   * expand to fill its container.
-   *
-   * We'll then set flex-shrink to 1 so that the
-   * element will shrink as its container gets
-   * smaller. However, it will only shrink so far
-   * because...
-   *
-   * ...we set flex-basis to auto. This causes
-   * the content's size to also be a factor in the
-   * calculation of the element's size. Because
-   * the width of a child element is set (below),
-   * this element won't shrink below that size.
-   *
-   * The net result is that this element stays a
-   * fixed size, neither expanding nor shrinking.
-   */
   flex: 0 1 auto;
 
-  padding-bottom: 10px;
+  padding-bottom: 1px;
 }
 
   .postUser__portrait {
@@ -89,7 +54,7 @@
 
   .postUser__name {
     color: #57727C;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1;
     text-align: center;
@@ -127,15 +92,15 @@
   flex: 1 1 0%;
 
   position: relative;
-  padding: 15px;
-  border: 1px solid #CAD0D2;
-  border-radius: 4px;
+  padding: 5px;
+  border: 2px solid #CAD0D2;
+  border-radius: 10px;
 }
 
 .postBody:after,
 .postBody:before {
   right: 100%;
-  top: 35px;
+  top: 5px;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -159,17 +124,10 @@
 }
 
   .postBody__content {
-    color: #57727C;
+   
     font-size: 20px;
   }
 
-  .postBody__date {
-    margin-top: 5px;
-    color: #86969C;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
 
 </style>
 <body>
@@ -194,6 +152,7 @@
     </div>
    
   </div>
+
 </div>
 	
 	
