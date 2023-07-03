@@ -22,6 +22,7 @@ public class Eat {
 	private String detail;
 	private String star;
 	private String link;
+	private String pic;
 	
 
 	

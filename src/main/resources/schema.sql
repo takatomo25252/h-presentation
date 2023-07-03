@@ -12,7 +12,8 @@ CREATE TABLE eat
    genre TEXT,
    detail TEXT,
    star TEXT,
-   link TEXT
+   link TEXT,
+   pic TEXT
 );
 
 
