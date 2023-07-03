@@ -6,8 +6,16 @@
 </head>
 
 	<style>
+		h1 {
+		margin-top: 50px;	
+		margin-bottom: 50px;	
+			
+		}
+		
+		
 	body{background-color: rgb(255, 255, 210);color: rgb(70, 9, 0);
 	font-family: '游明朝 Medium', serif;text-align:center ;
+	
 	}
 	
 	
@@ -17,6 +25,7 @@
 }
 
 .postUser {
+	
   flex: 0 1 auto;
 
   padding-bottom: 1px;
@@ -157,6 +166,7 @@ input[type="checkbox"]:checked + label::after {
   transition    : .3s;         /* なめらか変化 */
   box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
   border        : 2px solid #660000;    /* 枠の指定 */
+  margin-bottom: 70px;
 }
 .button:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
@@ -164,14 +174,31 @@ input[type="checkbox"]:checked + label::after {
   background    : #ffff99;     /* 文字色     */
 }
 
+input[type="text"]:focus {
+  border-color: rgb(79, 0, 0);
+  box-shadow: 0 0 8px 0 rgb(146, 40, 1);
+ 
+}
+input[type="text"] {
+	margin-top:40px;
+  height:90px;
+  width:480px;
+border-radius : 4%; 
+}
+input::placeholder {
+ font-size: 20px;
+}
+
+
 </style>
 <body>
 <h1>[[${shopname}]] </h1>
+<hr>
 <a>本サイトがあなたのお役に立てれば幸いです。<br>
 よろしければ投稿お待ちしております。</a>
 <br>
 <a href="/eat">一覧に戻る</a>
-
+<br><br><br>
 
 	
 	<div th:each="comment:${comments}" class="post">
@@ -194,7 +221,7 @@ input[type="checkbox"]:checked + label::after {
 </div>
 	
 	
-<a>行ってみたい！</a>	
+<a style="font-size: 20px">行ってみたい！</a>	
 <input type="checkbox" id="like">
 <label for="like">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
