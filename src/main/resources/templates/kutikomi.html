@@ -201,11 +201,8 @@ input::placeholder {
 	ネットでは、5点満点で、[[${shopstar}]]と評価されてます。<br>
 	詳細はこちらの公式ページへ→<a th:href="@{${shoplink}}"  th:text="${shoplink}"></a></a>
 <hr>
-<a>本サイトがあなたのお役に立てれば幸いです。<br>
-よろしければ投稿お待ちしております。</a>
-<br>
-<a href="/eat">一覧に戻る</a>
-<br><br><br>
+
+<br><br>
 
 	
 	<div th:each="comment:${comments}" class="post">
@@ -250,5 +247,11 @@ input::placeholder {
 
 	
 </form>
+<br>
+<a>本サイトがあなたのお役に立てれば幸いです。<br>
+よろしければ投稿お待ちしております。</a>
+<br>
+<a href="/eat">一覧に戻る</a>
+<br><br><br>
 </body>
 </html>
