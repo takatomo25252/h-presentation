@@ -3,22 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <title>確認画面</title>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 </head>
-<h1>確認画面</h1>
-<a>こちらの内容で口コミ登録させていただきます。
-	<br>ご確認ください。</a>
+<h1 style="font-family: 'Kaushan Script', cursive;font-size: 60px;">Confirmation</h1>
+<a>こちらの内容で口コミ登録させていただきます。ご確認ください。</a>
+<hr>
+
+<a style="font-family:  'Homemade Apple', cursive;">Je vais enregistrer une critique avec ce contenu.Veuillez confirmer.</a>
+
 <body>
 	<style>
 	body{background-color: rgb(255, 255, 210);color: rgb(70, 9, 0);
-	font-family: '游明朝 Medium', serif;text-align:center;background:url("https://i.pinimg.com/originals/20/de/17/20de17c40a95ddbbb44418539748ec5e.png");
+	font-family: '游明朝 Medium', serif;text-align:center;
+	background:url("https://i.pinimg.com/originals/20/de/17/20de17c40a95ddbbb44418539748ec5e.png");
 	background-repeat: no-repeat;
-	background-size: 100%;}
-	
+	background-size: 100%;
+	}
+	.centering {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    }
 	table{
   border-collapse:  collapse;
- 
+ margin-top:20px;
 }
+
+.button {
+	margin-top:20px;
+  display       : inline-block;
+  border-radius : 8%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 29px;   /* 余白       */
+  background    : #660000;     /* 背景色     */
+  color         : #ffff99;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #660000;    /* 枠の指定 */
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #660000;     /* 背景色     */
+  background    : #ffff99;     /* 文字色     */
+}
+
 </style>
+<div class="centering" >	
 <form action="/update" method="post">	
 <table border="1">
     <input type="hidden" name="namae" th:value="${comments.namae}">
@@ -40,10 +74,14 @@
 	<th>コメント</th>
 	<td>[[${comments.comment}]]</td>
 	</tr>
+	
 </table>
 	<input type="hidden"name="eatid" th:value="${comments.eat.id}">
 	<input type="hidden"name="bango" th:value="${comments.bango}">
-<input type="submit" value="投稿">
+	</div>
+	
+	
+<input type="submit" value="投稿" class="button">
 
 </form>
 </body>
