@@ -193,6 +193,13 @@ input::placeholder {
 </style>
 <body>
 <h1>[[${shopname}]] </h1>
+
+
+
+<a> [[${shopname}]]は、[[${shoparea}]]にある[[${shopgenre}]]のレストランです。<br>
+	[[${shopdetail}]]を食べるレストランです。<br>
+	ネットでは、5点満点で、[[${shopstar}]]と評価されてます。<br>
+	詳細はこちらの公式ページへ→<a th:href="@{${shoplink}}"  th:text="${shoplink}"></a></a>
 <hr>
 <a>本サイトがあなたのお役に立てれば幸いです。<br>
 よろしければ投稿お待ちしております。</a>

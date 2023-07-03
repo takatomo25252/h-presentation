@@ -70,6 +70,11 @@ public class EatController {
 			}*/
 		m.addAttribute("comments", comments);
 		m.addAttribute("shopname", comments.get(0).getEat().getName());
+		m.addAttribute("shoparea", comments.get(0).getEat().getArea());
+		m.addAttribute("shopgenre", comments.get(0).getEat().getGenre());
+		m.addAttribute("shopdetail", comments.get(0).getEat().getDetail());
+		m.addAttribute("shopstar", comments.get(0).getEat().getStar());
+		m.addAttribute("shoplink", comments.get(0).getEat().getLink());
 		
 		//商品編集画面表示へ
 		return "kutikomi";
