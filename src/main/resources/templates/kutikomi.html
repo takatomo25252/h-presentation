@@ -144,6 +144,8 @@ input[type="checkbox"]:checked + label::after {
   }
 }
 
+
+
 </style>
 <body>
 <h1>[[${shopname}]] </h1>
@@ -188,9 +190,12 @@ input[type="checkbox"]:checked + label::after {
 	<input type="hidden"name="eatid" th:value="${comments[0].eat.id}">
 	<input type="hidden"name="bango" th:value="${comments[0].bango}">
 	<input type="hidden"name="namae" th:value="${comments[0].namae}">
-	<input type="text"name="newcomment">
+	<input type="text"name="newcomment" placeholder="口コミ登録">
 	<br>
-	<input type="submit"value="確認">
+	
+	<div class='btn'>
+		<input type="submit"value="確認" >
+</div>
 	
 </form>
 </body>
