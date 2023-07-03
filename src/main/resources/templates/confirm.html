@@ -54,28 +54,30 @@
 </style>
 <div class="centering" >	
 <form action="/update" method="post">	
-<table border="1">
+
     <input type="hidden" name="namae" th:value="${comments.namae}">
 	<input type="hidden" name="name" th:value="${comments.eat.name}">
 	<input type="hidden" name="comment" th:value="${comments.comment}">
-	<tr>
-	<th>ユーザー名</th>
-	<td>[[${comments.namae}]]</td>
-	</tr>
+	<div style="font-size: 20px;">
+		
+	<br>
+	～ユーザー名～<br>
+	[[${comments.namae}]]<br>
 	
 	
-	<tr>
-	<th>店名</th>
-	<td>[[${comments.eat.name}]]</td>
-	</tr>
+	<br>
+	
+	～店名～<br>
+	[[${comments.eat.name}]]<br>
 	
 	
-	<tr>
-	<th>コメント</th>
-	<td>[[${comments.comment}]]</td>
-	</tr>
+	<br>
 	
-</table>
+	～コメント～<br>
+	[[${comments.comment}]]<br>
+	
+	</div>
+
 	<input type="hidden"name="eatid" th:value="${comments.eat.id}">
 	<input type="hidden"name="bango" th:value="${comments.bango}">
 	</div>
