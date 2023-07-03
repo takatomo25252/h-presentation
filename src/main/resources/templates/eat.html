@@ -144,7 +144,28 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   text-decoration: none;
   font-size: 25px;
 }
-		
+	
+.button {
+  display       : inline-block;
+  border-radius : 8%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 29px;   /* 余白       */
+  background    : #660000;     /* 背景色     */
+  color         : #ffff99;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #660000;    /* 枠の指定 */
+  margin-bottom: 70px;
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #660000;     /* 背景色     */
+  background    : #ffff99;     /* 文字色     */
+}
+	
 	</style>
 	
 	
@@ -179,39 +200,27 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 
 
 <table border="1px">
-			<tr>
-				<th>店舗名</th>
-				<th>地域</th>
-				<th>ジャンル</th>
-				<th>詳細</th>
-				<th>点数</th>
-				<th>口コミ</th>
-				<th>リンク</th>
-				<th>画像</th>
-			</tr>
-			<tr th:each="eat:${eats}">
-				<td th:text="${eat.name}"></td>
-				<td th:text="${eat.area}"></td>
-				<td th:text="${eat.genre}"></td>
-				<td th:text="${eat.detail}"></td>
-				<td th:text="${eat.star}"></td>
-				
-				
-				<td>
-			<form th:action="kutikomi" method="get">
+	
+	<tr th:each="eat:${eats}">
+	<td><img th:src="@{${eat.pic}}"alt="" width="750px" height="500px"></td>
+	
+	<td ><a th:text="${eat.name}" style="font-size: 35px;"></a><hr>  
+	
+		<a th:text="${eat.area}" style="font-size: 25px;"   ></a>
+		<a th:text="${eat.genre}" style="font-size: 25px;"  ></a>
+		<a th:text="${eat.detail}"style="font-size: 25px;"></a><br>
+		<a style="font-size: 25px;">星：</a>
+		<a th:text="${eat.star}" style="font-size: 25px;"></a>
+	<br>
+	<form th:action="kutikomi" method="get">
 				<!--<input type="hidden" name="id" th:value="${eat.id}">-->
 			<input type="hidden"name="eatid" th:value="${eat.id}">
-				<input type="submit" value="口コミ">
+				<input type="submit" value="口コミ" class="button" >
 			</form>
-			
-			
-		</td>
-				<td><a th:href="@{${eat.link}}"  th:text="${eat.link}"></a></td>
-				
-				<td><img th:src="@{${eat.pic}}"alt=""></td>
-			</tr>
-			
-
+		<br>
+		<a th:href="@{${eat.link}}"  th:text="${eat.link}"></a></td>
+	</tr>
+	
 			
 		</table>
 </body>
