@@ -13,7 +13,10 @@ CREATE TABLE eat
    detail TEXT,
    star TEXT,
    link TEXT,
-   pic TEXT
+   pic TEXT,
+   inside TEXT,
+   outside TEXT,
+   food TEXT
 );
 
 

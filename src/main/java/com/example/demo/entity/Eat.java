@@ -23,6 +23,10 @@ public class Eat {
 	private String star;
 	private String link;
 	private String pic;
+	private String inside;
+	private String outside;
+	private String food;
+	
 	
 
 	
