@@ -11,5 +11,6 @@ public interface HumanRepository extends JpaRepository<Human, Integer> {
 
 	List<Human> findByBango(Integer bango);
 	Optional<Human> findByBangoAndPassword(Integer bango, String password);
+
 	
 }

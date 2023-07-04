@@ -32,5 +32,9 @@ public class Human {
 		this.namae = namae;
 		this.password = password;
 	}
+	public Human(String namae) {
+		
+		this.namae = namae;
+	}
 
 }

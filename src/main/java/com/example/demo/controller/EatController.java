@@ -24,12 +24,14 @@ public class EatController {
 	
 	/*@Autowired
 	private HumanRepository humanRepository;*/
+
+	
 	
 	@GetMapping("/eat")
 	public String index(
 			@RequestParam(name="area" ,required=false) String area , 
 			@RequestParam(name="genre" ,required=false) String genre,
-			
+			@RequestParam(name="namae" ,required=false) String namae,
 			Model m) {
 	List<Eat> eats =null;
 	
@@ -44,7 +46,9 @@ public class EatController {
 				eats=eatRepository.findByGenre(genre);}
 			
 		
-	
+	   
+			/*human.setNamae(namae);*/
+		
 		m.addAttribute("eats", eats);
 		
 		return "eat" ;
