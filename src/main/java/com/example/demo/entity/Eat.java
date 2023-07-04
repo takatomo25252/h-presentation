@@ -26,6 +26,7 @@ public class Eat {
 	private String inside;
 	private String outside;
 	private String food;
+	private String read;
 	
 	
 

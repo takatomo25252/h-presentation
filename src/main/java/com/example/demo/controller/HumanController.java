@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Human;
+import com.example.demo.model.Account;
 import com.example.demo.repository.HumanRepository;
 
 @Controller
@@ -20,6 +21,9 @@ public class HumanController {
 	
 	@Autowired
 	private HumanRepository humanRepository;
+	@Autowired
+	Account account;
+	
 	
 	// ログイン画面を表示
 		@GetMapping({ "/", "/login", "/logout"  })
@@ -64,6 +68,9 @@ public class HumanController {
 			human.setBango(bango1);
 			human.setNamae(namae);
 
+			account.setName(namae);
+			
+			
 			// 「/items」へのリダイレクト
 			return "redirect:/eat";
 		}

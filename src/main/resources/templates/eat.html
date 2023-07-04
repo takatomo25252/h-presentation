@@ -174,7 +174,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 	</div>
 <hr>
 
-
+ [[${@account.name}]]
 
 
 
@@ -208,7 +208,8 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 	<tr th:each="eat:${eats}">
 	<td><img th:src="@{${eat.pic}}"alt="" width="750px" height="500px"></td>
 	
-	<td ><a th:text="${eat.name}" style="font-size: 35px;"></a><hr>  
+	<td ><a th:text="${eat.read}" style="font-size: 18px;"></a><br>
+		<a th:text="${eat.name}" style="font-size: 35px;"></a><hr>  
 	
 		<a th:text="${eat.area}" style="font-size: 25px;"   ></a>
 		<a th:text="${eat.genre}" style="font-size: 25px;"  ></a>

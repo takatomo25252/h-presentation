@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Comments;
 import com.example.demo.entity.Eat;
+import com.example.demo.model.Account;
 import com.example.demo.repository.CommentRepository;
 import com.example.demo.repository.EatRepository;
 
@@ -23,6 +24,9 @@ public class NewCommentController {
 
 	@Autowired
 	private CommentRepository commentRepository;
+	
+	@Autowired
+	Account account;
 
 	@PostMapping("/write")
 	public String write(
@@ -39,7 +43,7 @@ public class NewCommentController {
 		if (result.isPresent()) {
 			eat = result.get();
 		}
-		Comments comments = new Comments(eat, bango, namae, newcomment);
+		Comments comments = new Comments(eat, bango, account.getName(), newcomment);
 
 		commentRepository.save(comments);
 

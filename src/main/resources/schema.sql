@@ -16,7 +16,8 @@ CREATE TABLE eat
    pic TEXT,
    inside TEXT,
    outside TEXT,
-   food TEXT
+   food TEXT,
+   read TEXT
 );
 
 
