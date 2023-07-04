@@ -27,7 +27,7 @@ INSERT INTO comments (eatid,bango,namae,comment) VALUES ('5','5','caesar','市�
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('6','6','al5.h243o52hq','一回目はおいしかったですが、行く回数が増えると、味付けが雑だと感じました。やはり広東人の料理人でないといけないですね。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('7','7','弥勒菩薩','オープンテラスの席は、交差点が一望できて解放感がすごく良い。店内のインテリアもおしゃれです。ランチセットは春巻きとスープ付きですが、メインディッシュは結構時間かかります。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('8','8','qwer','さすが老舗の人気店。唐揚げとカキフライとシーザーサラダをたべましたがどれも絶品でした。また今度ほかのお料理も食べてみたいです。');
-INSERT INTO comments (eatid,bango,namae,comment) VALUES ('9','4','張三','総体来説不像是新疆人開的，像是東北人開的。有烤羊排和拉皮之類的新疆菜，但菜单裏鍋包肉和地三鮮之類的東北菜也很多，而且整体很咸。羊肉串類的全是冷凍的肉，不是很新鮮。');
+INSERT INTO comments (eatid,bango,namae,comment) VALUES ('9','4','張三','総体来説不像是新疆人開的，像是東北人開的。有烤羊排和拉皮之類的新疆菜，但菜単裏鍋包肉和地三鮮之類的東北菜也很多，而且整体很咸。羊肉串類的全是冷凍的肉，不是很新鮮。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('10','6','al5.h243o52hq','チェーンの回転ずしとは比べ物にならないおいしさ！鮮度や質が違います。客層もよく衛生面の心配もないです。');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('11','5','caesar','This restaurant is located in Ikebukuro Seibu department store, featuring french cuisine especially lyon. The scallops and escargot was tender and rich. However, the steak was not stunning but cost too much. ');
 INSERT INTO comments (eatid,bango,namae,comment) VALUES ('12','1','はると','スープがめちゃくちゃこってりです。しかし定期的に食べたくなるこの味…');

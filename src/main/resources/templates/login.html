@@ -26,34 +26,26 @@
     display: flex;
     justify-content: center;
 }
-.btn{
-    width:100px;
-    height:40px;
-    line-height:40px;
+.button {
+	margin-top:20px;
+  display       : inline-block;
+  border-radius : 8%;          /* 角丸       */
+  font-size     : 18pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 29px;   /* 余白       */
+  background    : #660000;     /* 背景色     */
+  color         : #ffff99;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  border        : 2px solid #660000;    /* 枠の指定 */
 }
-.btn a{
-    display:block;
-    width:100%;
-    height:100%;
-    text-decoration: none;
-    background:#700000;
-    text-align:center;
-    color:#FBFFC0;
-    font-size:20px;
-    font-weight:bold;
-    border-radius:10px;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    box-shadow:5px 5px 0px 0px #DEDEDE ;
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  color         : #660000;     /* 背景色     */
+  background    : #ffff99;     /* 文字色     */
 }
-.btn a:hover{
-    background:#E5D6D6;
-    color:#3A0335;
-    margin-left:3px;
-    margin-top:3px;
-    box-shadow:none;
-}
-
 
 
 </style>	
@@ -81,20 +73,21 @@
 			<input type="text" name="bango" placeholder="ユーザーID"><br>
 			<input type="password" name="password" placeholder="パスワード"><br>
 			
-			
-			<div class='btn'>
-    <a href="/eat">Login</a>
-</div>
+			<input type="submit" value="Login" class="button">
 			
 			
+
 			
 			
-			<br> <span th:text="${message}" style="color: rgb(128, 0, 64)"></span>
+			
+			
+			<br><br> <span th:text="${message}" style="color: rgb(128, 0, 64)"></span>
 		</form>
 		
 		<br>
 		<a　>初めてご利用の方は、新規登録してください。</a><br>
 		<a href="/account">新規会員登録はこちら</a>
+		<br><br><br><br>
 	</main>
 	
 	</div>
