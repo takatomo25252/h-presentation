@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>店舗一覧s</title>
+<title>店舗一覧</title>
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +13,7 @@
 	
 .centering {
     align-items: center;
-    display: flex;
+
     justify-content: center;}     
 
 table{
@@ -23,7 +23,7 @@ table{
 body { 
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   animation: bugfix infinite 1s;
   -webkit-animation: bugfix infinite 1s;
 }
@@ -107,7 +107,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
 }
 
 #overlay {
-  height: 100vh;
+  height: 300vh;
   width: 100vw;
   background: rgb(47, 0, 0);
   opacity: 80%;
@@ -115,6 +115,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   visibility: hidden;
   position: fixed;
 }
+
 #overlay.active {
 
 }
@@ -124,7 +125,7 @@ input[type=checkbox]:checked ~ #overlay-button span:after {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 80vh;
+  height: 68vh;
   padding-left: 0;
   list-style-type: none;
 }
@@ -171,7 +172,6 @@ h1 {
 	
 	font-size:50px;
 	text-align:center;
-	line-height:0.95em;
 	font-weight:bold;
 	color: transparent;
 	background : rgb(68, 2, 0);
@@ -191,15 +191,12 @@ h1 {
 <hr>
 
 
-
-
-
 <input type="checkbox" id="overlay-input" />
 <label for="overlay-input" id="overlay-button"><span></span></label>
   <div id="overlay">
     <ul>
 		 <a>Menu</a>
-		<li><br></li>
+		
 	  <a>～～地域 Choose your area～～</a>
       <li> <a href="/eat?area=池袋">池袋</a></li>
       <li><a href="/eat?area=市ヶ谷">市ヶ谷</a></li>
@@ -215,10 +212,10 @@ h1 {
     </ul>
   </div>
 
+<audio controls src="/music/chinese.mp3" type="audio/mp3">chinese</audio>
 
 
-
-<p style="text-align: right;">ようこそ [[${@account.name}]]さん</p>
+<p style="text-align: right;">ようこそ　 [[${@account.name}]]　さん～　　　</p>
 <table >
 	
 	<tr th:each="eat:${eats}">
@@ -236,7 +233,7 @@ h1 {
 	<form th:action="kutikomi" method="get">
 				<!--<input type="hidden" name="id" th:value="${eat.id}">-->
 			<input type="hidden"name="eatid" th:value="${eat.id}">
-				<input type="submit" value="口コミ" class="button" >
+				<input type="submit" value="もっと見る" class="button" >
 			</form>
 		<br>
 		<a th:href="@{${eat.link}}"  th:text="${eat.link}"></a></td>
@@ -244,5 +241,9 @@ h1 {
 	
 			
 		</table>
+	<br>
+	<br>	
+	<a href="/logout" style="text-align: right;">Logout</a>	
+				<br>	<br>
 </body>
 </html>

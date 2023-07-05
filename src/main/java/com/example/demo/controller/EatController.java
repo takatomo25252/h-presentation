@@ -84,7 +84,7 @@ public class EatController {
 		m.addAttribute("shopinside", comments.get(0).getEat().getInside());
 		m.addAttribute("shopoutside", comments.get(0).getEat().getOutside());
 		m.addAttribute("shopfood", comments.get(0).getEat().getFood());
-		
+		m.addAttribute("shopread", comments.get(0).getEat().getRead());
 		//商品編集画面表示へ
 		return "kutikomi";
 	}
