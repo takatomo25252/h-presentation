@@ -20,6 +20,7 @@
 	-webkit-background-clip : text;
 		}
 		h3 {
+			margin-top: -8px;
 			margin-bottom: -50px;
 		font-size: 30px;
 	text-align:center;
@@ -129,11 +130,16 @@ input[type="checkbox"] + label svg {
   fill: #FAE2E2;
   transition: all .3s;
 }
+
+
+
 input[type="checkbox"]:checked + label svg {
   fill: #FA9797;
   animation: like .8s ease-out;
   transition: all .3s;
 }
+
+
 @keyframes like {
   0% {
     transform: scale(1,1);
@@ -158,6 +164,9 @@ input[type="checkbox"]:checked + label::after {
   left: -80px;
   z-index: -100;
 }
+
+
+
 @keyframes circle {
   0% {
     transform: scale(.2,.2);
@@ -212,6 +221,8 @@ input::placeholder {
 }
 
 
+
+  
 </style>
 <body>
 	<img th:src="@{${shopflag}}"alt="" width="150px" height="100px">
@@ -255,17 +266,39 @@ input::placeholder {
 
 
 </div>
+		
 	
-	
-<a style="font-size: 20px">行ってみたい！</a>	
+<a style="font-size: 20px">美味しそう！</a>	
 <input type="checkbox" id="like">
 <label for="like">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
 </svg>
 </label>	
-	
-	
+
+<a style="font-size: 20px">おしゃれ！</a>	
+<input type="checkbox" id="nice" >
+<label for="nice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+</svg>
+</label>	
+
+<a style="font-size: 20px">最高！</a>	
+<input type="checkbox" id="dislike" >
+<label for="dislike">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+</svg>
+</label>	
+
+<a style="font-size: 20px">今度行こう！</a>	
+<input type="checkbox" id="letsgo" >
+<label for="letsgo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+</svg>
+</label>	
 	
 <form th:action="write" method="post">	
 	<input type="hidden"name="eatid" th:value="${comments[0].eat.id}">
